@@ -114,7 +114,7 @@
         </g>
       </symbol>
     </svg>
-    <header class="container  page-header">
+    <header class="page-header">
       <div class="page-header__logo">
         <div class="logo">
           <h1><a class="logo__link" href="/"><?php echo(get_bloginfo( 'name' ))?></a></h1>

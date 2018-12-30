@@ -18,6 +18,7 @@ Theme Name: Praguienne Anri
 12. Footer
 13. Content Overlay
 14. Post-list
+15. Homepage slider
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -61,8 +62,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Shadows Into Light", "Martel", serif;
-  font-weight: 800;
+  font-family: "Amatic SC", serif;
+  font-weight: 700;
 }
 /*------------------------------------------------------------------
 [2. Header ]
@@ -101,6 +102,7 @@ h6 {
 .logo__link {
   position: sticky;
   font-size: 32px;
+  font-family: "Over the Rainbow";
   color: #262626a8;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -122,6 +124,8 @@ h6 {
 */
 .main-nav {
   position: relative;
+  font-family: "Amatic SC", serif;
+  font-size: 24px;
 }
 .menu {
   margin: 0;
@@ -222,7 +226,7 @@ svg {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .main-nav {
     position: absolute;
     left: -258px;
@@ -274,13 +278,13 @@ svg {
 .nav-toggle {
   display: none;
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .nav-toggle {
     display: block;
     text-align: center;
     align-self: center;
-    justify-self: flex-end;
-    margin-right: 32px;
+    justify-self: center;
+    grid-column: 1/-1;
   }
   .nav-toggle__icon {
     width: 32px;
@@ -1882,7 +1886,7 @@ a.page-numbers:hover {
 }
 
 .post-list article {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 @media (max-width: 992px) {
@@ -1891,9 +1895,13 @@ a.page-numbers:hover {
   }
 }
 
-.post-list article:nth-child(1) {
+.post-list article.page {
   grid-column: span 6;
 }
+
+/* .post-list article:nth-child(1) {
+  grid-column: span 6;
+} */
 /* 
 .post-list article:nth-child(2) {
   grid-column: span 3;
@@ -1919,4 +1927,17 @@ a.page-numbers:hover {
 
 .post-list nav {
   grid-column: span 6;
+}
+
+/*------------------------------------------------------------------
+[15. Homepage slider ]
+*/
+.top-slider {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .top-slider {
+    display: none;
+  }
 }

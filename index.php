@@ -1,15 +1,13 @@
 <?php get_header(); ?>
-		<?php
-        /* Start Secondary Loop */
-        $other_posts = new WP_Query( /*maybe some args here? */ );
-				while( $others_posts->have_posts() ): $other_posts->the_post(); 
-				
-				the_title();
-				
-        endwhile; /* end secondary loop */ 
-        wp_reset_postdata(); /* Restore the original queried page to the $post variable */
-    ?>
     <main>
+		<?php 
+			if(is_home()) : ?>
+			<div class="top-slider">
+				<?php echo do_shortcode('[smartslider3 slider=2]'); ?>
+			</div> 
+		<?php 
+			endif;
+    ?>
       <div class="container">
         <div class="col-md-8  col-lg-9 post-list">
           <?php
@@ -23,7 +21,7 @@
     					 * If you want to override this in a child theme, then include a file
     					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
     					 */
-    					get_template_part( 'template-parts/post/content' );
+							get_template_part( 'template-parts/post/content' );
 
     				endwhile;
 
