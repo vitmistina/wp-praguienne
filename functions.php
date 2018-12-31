@@ -28,7 +28,7 @@ function my_custom_sizes( $sizes ) {
 
 function themeScripts ()
 {
-  wp_enqueue_style( 'praguienne-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Amatic+SC:400,700|Over+the+Rainbow&amp;subset=latin-ext' , array(), null );
+  wp_enqueue_style( 'praguienne-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Amatic+SC:700|Rock+Salt&amp;subset=latin-ext' , array(), null );
   wp_enqueue_style( 'bootstrap-min-css',get_theme_file_uri( '/css/bootstrap.min.css'));
   wp_enqueue_style( 'praguienne-style', get_stylesheet_uri(), null, filemtime(get_stylesheet_directory()."/style.css") );
   // wp_enqueue_script( 'jquery-min', get_theme_file_uri( '/js/jquery-3.1.1.min.js' ) );

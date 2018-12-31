@@ -62,7 +62,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Amatic SC", serif;
+  font-family: "Amatic SC";
   font-weight: 700;
 }
 /*------------------------------------------------------------------
@@ -102,7 +102,7 @@ h6 {
 .logo__link {
   position: sticky;
   font-size: 32px;
-  font-family: "Over the Rainbow";
+  font-family: "Rock Salt";
   color: #262626a8;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -124,7 +124,7 @@ h6 {
 */
 .main-nav {
   position: relative;
-  font-family: "Amatic SC", serif;
+  font-family: "Amatic SC";
   font-size: 24px;
 }
 .menu {
