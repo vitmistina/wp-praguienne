@@ -102,7 +102,8 @@ h6 {
 .logo__link {
   position: sticky;
   font-size: 32px;
-  font-family: "Rock Salt";
+  font-family: "Shadows Into Light Two";
+  text-transform: uppercase;
   color: #262626a8;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
