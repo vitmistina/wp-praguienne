@@ -114,13 +114,7 @@
         </g>
       </symbol>
     </svg>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <div class="logo">
-          <h1><a class="logo__link" href="/"><?php echo(get_bloginfo( 'name' ))?></a></h1>
-          <div class="logo__description"><?php echo(get_bloginfo( 'description' ))?></div>
-        </div>
-      </div>
+    <header class="page-header <?php if(is_home()) echo 'home';?>">
       <nav class="main-nav">
         <?php wp_nav_menu( array('depth' => 1) ) ?>
         <div class="main-nav__search">
@@ -133,5 +127,15 @@
         <svg class="nav-toggle__icon">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#toggle"></use>
         </svg>
+      </div>
+      <div class="page-header__logo">
+        <div class="logo">
+          <h1>
+            <a class="logo__link" href="/">
+              <img src="<?php echo get_theme_file_uri( 'images/logo.png') ?>" alt="Praguienne"/>
+            </a>
+          </h1>
+          <div class="logo__description"><?php echo(get_bloginfo( 'description' ))?></div>
+        </div>
       </div>
     </header>

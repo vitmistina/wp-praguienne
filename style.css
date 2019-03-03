@@ -30,7 +30,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #3f3f3f;
-  background-color: mistyrose;
+  background-color: #fff7f6;
 }
 blockquote {
   position: relative;
@@ -75,23 +75,33 @@ h6 {
   display: grid;
 }
 @media (min-width: 768px) {
-  .page-header {
+  .page-header:not(.home) {
     grid-template-columns: auto 1fr;
+    grid-template-areas: "logo menu";
     padding-left: 32px;
     align-items: center;
     padding-top: 20px;
     margin-bottom: 0;
     position: sticky;
     top: 0;
-    background: mistyrose;
+    background: #fff7f6;
     z-index: 999;
+  }
+  .page-header.home {
+    grid-template-areas:
+      "menu"
+      "logo";
   }
 }
 
 .page-header__logo {
-  margin-bottom: 15px;
+  margin: 15px 0;
   text-align: center;
-  grid-column: 1;
+  grid-area: logo;
+}
+
+.home .page-header__logo {
+  margin-bottom: 32px;
 }
 /*------------------------------------------------------------------
 [3. Logo ]
@@ -111,6 +121,16 @@ h6 {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
 }
+
+.page-header:not(.home) .logo__link img {
+  width: 120px;
+}
+
+.home .logo__link img {
+  width: 300px;
+  max-width: 90vw;
+}
+
 .logo__link:hover {
   color: #262626a8;
   text-decoration: none;
@@ -124,6 +144,7 @@ h6 {
 [4. Navigation ]
 */
 .main-nav {
+  grid-area: menu;
   position: relative;
   font-family: "Amatic SC";
   font-size: 24px;
@@ -462,7 +483,7 @@ img.aligncenter {
 
 @media (min-width: 768px) {
   .post {
-    padding: 0 30px;
+    padding: 0 15%;
   }
 }
 
@@ -1487,14 +1508,28 @@ a.more-link {
 /*------------------------------------------------------------------
 [10. Sidebar Widget ]
 */
+
+.main-sidebar {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .main-sidebar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main-sidebar,
+.insta-sidebar {
+  margin-bottom: 40px;
+}
+
 .sidebar-widget {
   padding: 0 30px;
   padding-bottom: 40px;
   background-color: #ffffff;
 }
-.sidebar-widget:last-child {
-  margin-bottom: 80px;
-}
+
 .sidebar-widget h3 {
   margin-top: 0;
   margin-bottom: 0;

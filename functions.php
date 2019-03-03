@@ -51,6 +51,21 @@ function praguienneEchoTimePosted()
   echo '</span>';
 }
 
+function my_custom_sidebar() {
+  register_sidebar(
+      array (
+          'name' => __( 'Insta Sidebar', 'praguienne' ),
+          'id' => 'insta-sidebar',
+          'description' => __( 'Sidebar for instagram feed', 'praguienne' ),
+          'before_widget' => '<div class="sidebar-widget">',
+          'after_widget' => "</div>",
+          'before_title' => '<h3 class="widget-title">',
+          'after_title' => '</h3>',
+      )
+  );
+}
+add_action( 'widgets_init', 'my_custom_sidebar' );
+
 function SearchFilter($query) {
   if ($query->is_search) {
     $query->set('post_type', 'post');

@@ -9,7 +9,7 @@
 			endif;
     ?>
       <div class="container">
-        <div class="col-md-8  col-lg-9 post-list">
+        <div class="post-list">
           <?php
     			if ( have_posts() ) :
 
