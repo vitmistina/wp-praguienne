@@ -483,7 +483,7 @@ img.aligncenter {
 
 @media (min-width: 768px) {
   .post {
-    padding: 0 15%;
+    padding: 0 12.5%;
   }
 }
 
@@ -1499,7 +1499,10 @@ a.more-link {
     display: grid;
   }
 
-  .single-post .blog-post__content p:first-child {
+  .single-post
+    article:not(.category-longerexcerpt)
+    .blog-post__content
+    p:first-child {
     grid-column: span 2;
     margin: 0;
   }
