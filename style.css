@@ -483,7 +483,7 @@ img.aligncenter {
 
 @media (min-width: 768px) {
   .post {
-    padding: 0 12.5%;
+    padding: 0;
   }
 }
 
@@ -508,7 +508,7 @@ img.aligncenter {
 .blog-post__featured-image {
   width: 100%;
   height: auto;
-  padding: 30px 0px;
+  padding: 0;
   padding-bottom: 0;
 }
 
@@ -633,7 +633,7 @@ span.the-btn:hover {
   opacity: 0.8;
 }
 .blog-post__content {
-  padding: 20px 0px;
+  padding: 0 12.5%;
   line-height: 28px;
 }
 
@@ -762,7 +762,7 @@ a.more-link {
 }
 @media (min-width: 768px) {
   .single-post {
-    padding: 0 30px;
+    padding: 0;
   }
 }
 .single-post--fullsize .single-post__title,
