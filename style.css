@@ -71,13 +71,15 @@ h6 {
 .page-header {
   margin-top: 0;
   padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
   display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "logo menu";
 }
 @media (min-width: 768px) {
   .page-header:not(.home) {
-    grid-template-columns: auto 1fr;
-    grid-template-areas: "logo menu";
     padding-left: 32px;
     align-items: center;
     padding-top: 20px;
@@ -91,6 +93,7 @@ h6 {
     grid-template-areas:
       "menu"
       "logo";
+    grid-template-columns: 1fr;
   }
 }
 
@@ -305,8 +308,9 @@ svg {
     display: block;
     text-align: center;
     align-self: center;
-    justify-self: center;
-    grid-column: 1/-1;
+    justify-self: end;
+
+    grid-area: menu;
   }
   .nav-toggle__icon {
     width: 32px;
@@ -477,15 +481,15 @@ img.aligncenter {
 
 .post {
   margin-bottom: 30px;
-  padding: 0 20px;
-  background-color: #ffffff;
+  padding: 0;
+  background-color: transparent;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .post {
     padding: 0;
   }
-}
+} */
 
 .page,
 .not-found {
@@ -633,13 +637,15 @@ span.the-btn:hover {
   opacity: 0.8;
 }
 .blog-post__content {
-  padding: 0 8px;
+  padding: 16px;
+
   line-height: 28px;
+  background: #ffffff;
 }
 
 @media (min-width: 768px) {
   .blog-post__content {
-    padding: 0 12.5%;
+    padding: 0 20px;
   }
 
   .col-md-12 .blog-post__content p {
@@ -762,7 +768,7 @@ a.more-link {
 .single-post {
   margin-bottom: 30px;
   padding: 0;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .single-post {
@@ -1475,7 +1481,7 @@ a.more-link {
   .single-post .blog-post__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px auto;
+    margin: 20px 12.5%;
     justify-items: start;
     grid-column-gap: 34px;
   }
@@ -1970,6 +1976,16 @@ a.page-numbers:hover {
 
 .post-list nav {
   grid-column: span 6;
+}
+
+.entry-header {
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .entry-header {
+    padding-bottom: 16px;
+  }
 }
 
 /*------------------------------------------------------------------
