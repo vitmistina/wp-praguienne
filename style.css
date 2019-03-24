@@ -633,11 +633,15 @@ span.the-btn:hover {
   opacity: 0.8;
 }
 .blog-post__content {
-  padding: 0 12.5%;
+  padding: 0 8px;
   line-height: 28px;
 }
 
 @media (min-width: 768px) {
+  .blog-post__content {
+    padding: 0 12.5%;
+  }
+
   .col-md-12 .blog-post__content p {
     width: 90%;
     margin: 20px 0;
