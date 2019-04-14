@@ -1,13 +1,5 @@
 <?php get_header(); ?>
     <main>
-		<?php 
-			if(is_home()) : ?>
-			<div class="top-slider">
-				<?php echo do_shortcode('[smartslider3 slider=2]'); ?>
-			</div> 
-		<?php 
-			endif;
-    ?>
       <div class="container">
         <div class="post-list">
           <?php
