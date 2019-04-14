@@ -24,7 +24,11 @@
 			<a href="<?php the_permalink(); ?>">
 				<span class="post-thumb-wrapper">
 				<?php endif ?>
-					<?php the_post_thumbnail( 'large' ); ?>
+					<?php if ( is_single() ) {
+						the_post_thumbnail( 'full' );
+					} else {
+						the_post_thumbnail( 'medium_large' ); 
+					} ?>
 				<?php if ( !is_single() ) : ?>
 					<span class="caption">
 						<span class="the-btn">View Post</span>
